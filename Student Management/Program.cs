@@ -27,7 +27,7 @@ class Program
     {
         Console.WriteLine("What's the ID?");
         int id = Convert.ToInt32(Console.ReadLine());
-        Student target = notes.Find(a => a.Id == ID);
+        Student target = notes.Find(a => a.Id == id);
         if (target != null)
         {
             Console.WriteLine("ID already exist!");
@@ -45,13 +45,13 @@ class Program
     }
     static void getAllStudent()
     {
-        if (notes.Count = 0)
+        if (notes.Count == 0)
         {
             Console.WriteLine("List is empty!");
         }
         else
         {
-            Console.WriteLine($"{Id,-10}{Name,-20}{Age,-8}{GPA,-8}");
+            Console.WriteLine($"{"ID",-10}{"Name",-20}{"Age",-8}{"GPA",-8}");
             foreach (Student a in notes)
             {
                 Console.WriteLine($"{a.Id,-10}{a.Name,-20}{a.Age,-8}{a.GPA,-8}");
